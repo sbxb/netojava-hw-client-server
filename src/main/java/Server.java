@@ -17,7 +17,7 @@ public class Server {
                      BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
                     final String name = in.readLine();
-                    System.out.println("New connection accepted. Got '" + name + "' from port " + clientSocket.getPort() );
+                    System.out.println("New connection accepted. Got '" + name + "' from port " + clientSocket.getPort());
                     out.println(String.format("Hi %s, your port is %d", name, clientSocket.getPort()));
                 } catch (IOException e) {
                     System.out.println("ERROR Server failed to process client connection: " + e.getMessage());
